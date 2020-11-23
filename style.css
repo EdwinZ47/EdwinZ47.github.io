@@ -170,7 +170,7 @@ body {
 
 .movie-list-container {
   display: grid;
-  background-color: beige;
+  background-color: white;
   margin: 3% 20%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -209,7 +209,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  ;
   font-size: x-large;
   font-family: fantasy;
 }
