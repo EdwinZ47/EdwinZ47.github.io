@@ -182,6 +182,7 @@ body {
   background-color: beige;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  border-bottom: black solid 2px;
 }
 
 .list-header {
