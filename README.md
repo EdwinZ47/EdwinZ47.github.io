@@ -7,7 +7,7 @@ It stores the necessary information needed for the frontend to operate in two di
 	users.json stores the user's username and password
 	movie.json stores the movie's unique id, movie's title, the user who watched the movie, whether the user liked the movie, and an url to a poster for the movie.
 
-# API Documentation
+# Endpoint Documentation
 
 ```javascript
 {
