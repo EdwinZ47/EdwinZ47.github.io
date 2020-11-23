@@ -30,7 +30,7 @@
         </div>
 
         <script> document.getElementById("welcome-user").innerHTML = `Welcome <span style="font-weight: bold; font-size:2em;">${localStorage.getItem("user")}!</span>`</script>
-        <script> document.getElementById("logout-button").addEventListener("click", function logout(){
+        <script> document.getElementById("logout-button").addEventListener("click", async function logout(){
             try{
                 const result = await axios({
                 method: 'get',
