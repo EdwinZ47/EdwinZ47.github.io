@@ -1,3 +1,9 @@
+# Backend Structure
+
+Our backends stores the two necessary types of information in two different JSON files. One for user that storse the user's username and password and another for movie that stores the movie's unique id, movie's title, the user who watched the movie, whether the user liked the movie, and an url to a poster for the movie.
+
+# API Documentation
+
 ```javascript
 {
   method: 'post',
@@ -16,7 +22,7 @@ Endpoint: POST - https://my-movie-list-2.herokuapp.com/register
 
 Params: 
 	User (string): Required, username of the person registerting
-	Password (string): Required, creates password for the current user. 
+	Password (string): Required, creates password for the current user
 
 Response: True for successful user registration or a 404 error if an user with the same username already exists.
 
@@ -39,7 +45,7 @@ Endpoint: POST - https://my-movie-list-2.herokuapp.com/
 
 Params:
   User (string): Required, username of the person logging in
-  Password (string): Required, corresponding password of username.
+  Password (string): Required, corresponding password of username
 
 Response: True for successful logins, a 404 error for non-existing users, or a 403 error for incorrect password.
 
@@ -51,6 +57,7 @@ Response: True for successful logins, a 404 error for non-existing users, or a 4
   withCredentials: true,
   }
 }
+```
 
 Purpose: Obtain all the movies on the current user’s Movie List
 
@@ -59,6 +66,7 @@ Endpoint: GET - https://my-movie-list-2.herokuapp.com/movies
 Params: No params required
 
 Response: An array containing all of the Movie objects in the user’s Movie list in JSON format or a 400 error if somehow a request was sent without an user being logged in.
+
 
 ```javascript
 {
@@ -70,6 +78,16 @@ Response: An array containing all of the Movie objects in the user’s Movie lis
   }
 }
 ```
+
+Purpose: Updates the “liked” attribute of a movie watched by the user
+
+Endpoint: PUT - https://my-movie-list-2.herokuapp.com/movies/:id  <- ":id" needs to be replaced with the id of the Movie object that is being updated
+
+Params:
+	Liked (string): Required, whether or not the movie was “liked” by the user. true = move was liked. false = movie was disliked. 
+
+Response: The updated Movie object for successful requests, a 403 error if the user was incorrect(not the user who watched the movie or no user is logged in), or a 404 error if the movie doesn't exist for the user who's sent the request.
+
 
 ```javascript
 {
@@ -90,19 +108,15 @@ Purpose: Adds a movie to current user’s Movie List
 
 Endpoint: POST - https://my-movie-list-2.herokuapp.com/movies
 
-Params: id: an unique string for the movie watched by the user, user: the username of the logged in user, title: the title of the movie being added, liked: true or false to indicate whether the user liked the movie, poster: an url for the movie's poster.
+Params: 
+	id (string): an unique string for the movie watched by the user
+	user (string): the username of the logged in user
+	title (string): the title of the movie being added
+	liked (string): true or false to indicate whether the user liked the movie
+	poster (string): an url for the movie's poster
 
 Response: The added Movie object in a JSON format for successful requests or a 403 error if there is no users logged in.
 
-
-Purpose: Updates the “liked” attribute of a movie watched by the user
-
-Endpoint: PUT - https://my-movie-list-2.herokuapp.com/movies/:id  <- ":id" needs to be replaced with the id of the Movie object that is being updated
-
-Params:
-	Liked: Required, whether or not the movie was “liked” by the user. true = move was liked. false = movie was disliked. 
-
-Response: The updated Movie object for successful requests, a 403 error if the user was incorrect(not the user who watched the movie or no user is logged in), or a 404 error if the movie doesn't exist for the user who's sent the request.
 
 ```javascript
 {
@@ -120,6 +134,7 @@ Params: No params required
 
 Response: True for successful requests, a 403 error if the user was not the user who watched the movie, or a 404 error if the movie was not found inside the current user's list.
 
+
 ```javascript
 {
   method: 'get',
@@ -135,7 +150,4 @@ Endpoint: GET - https://my-movie-list-2.herokuapp.com/logout
 Params: No params required
 
 Response: True
-
-
-
 
