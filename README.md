@@ -1,3 +1,10 @@
+# 3rd Party API
+
+We utilized omdb's api to retrieve all the necessary movie information that was used to create user's movie list.
+
+OMDB's website: http://www.omdbapi.com/
+
+
 # Backend Structure
 
 Our backend is made with express.js and uses expressSession to keep track of session states.
@@ -6,6 +13,7 @@ It stores the necessary information needed for the frontend to operate in two di
 
 	users.json stores the user's username and password
 	movie.json stores the movie's unique id, movie's title, the user who watched the movie, whether the user liked the movie, and an url to a poster for the movie.
+
 
 # Endpoint Documentation
 
