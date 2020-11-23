@@ -179,7 +179,7 @@ body {
 .list-header-container {
   display: grid;
   grid-template-columns: 170px auto 170px;
-  background-color: white;
+  background-color: beige;
   /* border-top-left-radius: 15px;
   border-top-right-radius: 15px; */
 }
