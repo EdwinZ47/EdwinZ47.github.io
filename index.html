@@ -41,7 +41,7 @@
             try{
                 const result = await axios({
                 method: 'post',
-                url: 'http://localhost:3030/login',
+                url: 'https://my-movie-list-2.herokuapp.com/login',
                 withCredentials: true,
                 data: {
                     user: user,
@@ -67,7 +67,7 @@
             try{
                 const result = await axios({
                 method: 'post',
-                url: 'http://localhost:3030/register',
+                url: 'https://my-movie-list-2.herokuapp.com/register',
                 withCredentials: true,
                 data: {
                     user: user,
