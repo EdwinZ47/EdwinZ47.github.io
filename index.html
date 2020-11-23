@@ -5,34 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign-in</title>
         <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     </head>
     
-    <body style="background-image: url(https://i.redd.it/4fxxbm4opjd31.jpg); background-repeat: repeat-y;">
-        <div class="sign-in-container">
-            <h1 id="login-header">Login</h1>
+    <!-- style="background-image: url(https://i.redd.it/4fxxbm4opjd31.jpg); background-repeat: repeat-y;" -->
 
-            <form id="login-form">
-              <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-              <br>
-              <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-              <br>
-              <button id="login-button">Login</button>
-              <br>
-              <button id="register-button">Register</button>
-            </form>
-
-            <div id="login-error-container">
-                <p id="login-error-msg">Invalid username and/or password</p>
+    <body>
+        <div class="form">
+            <i class="fas fa-film"></i>
+            <div class="sign-in-container">
+                <form id="login-form" class="login-form">
+                  <h1 id="login-header">MyMovieList</h1>
+                  <input type="text" name="username" id="username-field" class="login-form-field" placeholder="username">
+                  <input type="password" name="password" id="password-field" class="login-form-field" placeholder="password">
+                  <button id="login-button">login</button>
+                  <button id="register-button">register</button>  
+                </form>
+                <div id="user-notification-container"></div>
             </div>
-
-            <div id="registration-success-container">
-                <p id="successful-registration">You have registered! Click the Login button to login!</p>
-            </div>
-
-            <div id="registration-failed-container">
-                <p id="failed-registration">Registration failed! Please try a different username.</p>
-            </div>
-        </div>
+        </div>    
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -49,7 +41,7 @@
             try{
                 const result = await axios({
                 method: 'post',
-                url: 'https://my-movie-list-2.herokuapp.com/login',
+                url: 'http://localhost:3030/login',
                 withCredentials: true,
                 data: {
                     user: user,
@@ -59,7 +51,7 @@
                     window.location.href = "movielist.html";
                 }
             } catch(error){
-                document.getElementById("login-error-container").style.display = "inline-block";
+                document.getElementById("user-notification-container").innerHTML = "Invalid username and/or password"
             }
         })
 
@@ -75,18 +67,17 @@
             try{
                 const result = await axios({
                 method: 'post',
-                url: 'https://my-movie-list-2.herokuapp.com/register',
+                url: 'http://localhost:3030/register',
                 withCredentials: true,
                 data: {
                     user: user,
                     password: pw
                 }});
                 if(result.data){
-                    document.getElementById("registration-failed-container").style.display = "none";
-                    document.getElementById("registration-success-container").style.display = "inline-block";
+                    document.getElementById("user-notification-container").innerHTML = "You have registered! Click the Login button to login!"
                 }
             } catch(error){
-                document.getElementById("registration-failed-container").style.display = "inline-block";
+                document.getElementById("user-notification-container").innerHTML = "Registration failed! Please try a different username."
             }
         })
     </script>
