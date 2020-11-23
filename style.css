@@ -1,0 +1,191 @@
+body {
+    background-color: darkslategrey;
+    margin: 0;
+    padding: 0;
+}
+
+.sign-in-container{
+    display: grid;
+    padding: 5px;
+    justify-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 7px;
+    margin: 10% 30%;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+#login-form{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+#username-field{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(236, 232, 232);
+    padding: 5px;
+    border-radius: 13px; 
+    outline: none;
+}
+
+#password-field{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(236, 232, 232);
+    padding: 5px;
+    border-radius: 13px;
+    outline: none;
+}
+
+#login-button, #register-button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: fit-content;
+    justify-self: center;
+    border-radius: 13px;
+    background-color: lightskyblue;
+    outline: none; 
+}
+
+#login-error-container{
+    display: none;
+}
+
+#registration-success-container{
+    display: none;
+}
+
+#registration-failed-container{
+    display: none;
+}
+
+.navigation-panel{
+    position: fixed;
+    top: 300px;
+    left: 15px;
+    width: 15%;
+    background-color: beige;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/*These are for movielist*/
+.banner{
+    border: darkslategray solid;
+}
+
+.banner-head{
+    text-align: center;
+    font-size: 5em;
+    color: rgb(68, 144, 214);
+    text-shadow: 3px 3px 4px navy;
+    margin-bottom: 0;
+}
+
+.sub-head{
+    text-align: center;
+    padding-bottom: 10px;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 4px navy;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.movie-list-container{
+    display: grid;
+    background-color: beige;
+    margin: 3% 20%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.list-header-container{
+    display: grid;
+    grid-template-columns: 170px auto 170px;
+    background-color: darkcyan;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.list-header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+.list-header-container h2{
+    text-align: center;
+    color: burlywood;
+}
+
+.movie-entry{
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    margin: 5px 15px 0px;
+    border-bottom: thin solid black;
+}
+
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    font-size: x-large;
+    font-family: fantasy;
+}
+
+.title-container .movie-title{
+    vertical-align: middle;
+}
+
+.movie-thoughts{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.like-button, .dislike-button{
+    background-color: transparent;
+    outline-style: none;
+    /*height: fit-content;*/
+    border: none;
+    justify-self: center;
+}
+
+.like-button:hover, .dislike-button:hover{
+    cursor: pointer;
+} 
+
+.delete-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*These are for watchedsomething*/
+.search-container{
+    text-align: center;
+    margin: 3% 20%;
+}
+
+.search-result-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.search-result-entry{
+    background-color: beige;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 5px 5px gray;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.add-button{
+    margin-top: 15px;
+}
