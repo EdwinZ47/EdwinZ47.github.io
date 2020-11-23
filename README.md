@@ -1,6 +1,9 @@
 # Backend Structure
 
-Our backends stores the two necessary types of information in two different JSON files. One for user that storse the user's username and password and another for movie that stores the movie's unique id, movie's title, the user who watched the movie, whether the user liked the movie, and an url to a poster for the movie.
+Our backends stores the two necessary types of information in two different JSON files.
+
+	users.json stores the user's username and password
+	movie.json stores the movie's unique id, movie's title, the user who watched the movie, whether the user liked the movie, and an url to a poster for the movie.
 
 # API Documentation
 
