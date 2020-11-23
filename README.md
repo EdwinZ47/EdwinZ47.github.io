@@ -1,4 +1,5 @@
-```{
+```javascript
+{
   method: 'post',
   url: 'https://my-movie-list-2.herokuapp.com/login',
   withCredentials: true,
@@ -6,7 +7,8 @@
       user: user,
       password: pw
   }
-}```
+}
+```
  
 
 Purpose: Login to the server.
