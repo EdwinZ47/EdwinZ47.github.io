@@ -1,6 +1,8 @@
 # Backend Structure
 
-Our backends stores the two necessary types of information in two different JSON files.
+Our backend is made with express.js and uses expressSession to keep track of session states.
+
+It stores the necessary information needed for the frontend to operate in two different JSON files.
 
 	users.json stores the user's username and password
 	movie.json stores the movie's unique id, movie's title, the user who watched the movie, whether the user liked the movie, and an url to a poster for the movie.
