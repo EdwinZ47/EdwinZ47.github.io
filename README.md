@@ -44,7 +44,7 @@ Response: True for successful user registration or a 404 error if an user with t
  
 Purpose: Login to the server.
 
-Endpoint: POST - https://my-movie-list-2.herokuapp.com/
+Endpoint: POST - https://my-movie-list-2.herokuapp.com/login
 
 Params:
   User (string): Required, username of the person logging in
