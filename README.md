@@ -15,7 +15,7 @@ It stores the necessary information needed for the frontend to operate in two di
 	movie.json stores the movie's unique id, movie's title, the user who watched the movie, whether the user liked the movie, and an url to a poster for the movie.
 
 
-# Endpoint Documentation
+# Endpoint Documentation for Backend
 
 ```javascript
 {
