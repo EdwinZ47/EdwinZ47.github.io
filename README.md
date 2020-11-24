@@ -100,7 +100,7 @@ Endpoint: PUT - https://my-movie-list-2.herokuapp.com/movies/:id  <- ":id" needs
 Params: 
 - liked (string): Whether or not the movie was “liked” by the user. true = move was liked. false = movie was disliked. 
 
-Response: The updated Movie object for successful requests, a 403 error if the user was incorrect(not the user who watched the movie or no user is logged in), or a 404 error if the movie doesn't exist for the user who's sent the request.
+Response: The updated Movie object in a JSON format for successful requests, a 403 error if the user was incorrect(not the user who watched the movie or no user is logged in), or a 404 error if the movie doesn't exist for the user who's sent the request.
 
 
 ```javascript
@@ -118,7 +118,7 @@ Response: The updated Movie object for successful requests, a 403 error if the u
 }
 ```
 
-Purpose: Adds a movie to current user’s Movie List
+Purpose: Adds a movie to current user’s movie list
 
 Endpoint: POST - https://my-movie-list-2.herokuapp.com/movies
 
@@ -157,7 +157,7 @@ Response: True for successful requests, a 403 error if the user was not the user
 }
 ```
 
-Purpose: Logout of current User session.
+Purpose: Logout of current user session.
 
 Endpoint: GET - https://my-movie-list-2.herokuapp.com/logout
 
