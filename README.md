@@ -121,7 +121,8 @@ Purpose: Adds a movie to current user’s Movie List
 
 Endpoint: POST - https://my-movie-list-2.herokuapp.com/movies
 
-Params: 
+Params:
+
 	id (string): an unique string for the movie watched by the user
 	
 	user (string): the username of the logged in user
