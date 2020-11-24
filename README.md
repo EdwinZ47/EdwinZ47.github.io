@@ -58,8 +58,8 @@ Endpoint: POST - https://my-movie-list-2.herokuapp.com/login
 
 Params:
 
-- User (string): Username of the person logging in
-- Password (string): Corresponding password of username
+- user (string): Username of the person logging in
+- password (string): Corresponding password of username
 
 Response: True for successful logins, a 404 error for non-existing users, or a 403 error for incorrect password.
 
@@ -98,7 +98,7 @@ Purpose: Updates the “liked” attribute of a movie watched by the user
 Endpoint: PUT - https://my-movie-list-2.herokuapp.com/movies/:id  <- ":id" needs to be replaced with the id of the Movie object that is being updated
 
 Params: 
-- Liked (string): Whether or not the movie was “liked” by the user. true = move was liked. false = movie was disliked. 
+- liked (string): Whether or not the movie was “liked” by the user. true = move was liked. false = movie was disliked. 
 
 Response: The updated Movie object for successful requests, a 403 error if the user was incorrect(not the user who watched the movie or no user is logged in), or a 404 error if the movie doesn't exist for the user who's sent the request.
 
