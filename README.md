@@ -34,8 +34,8 @@ Purpose: Register a username and password onto the server.
 Endpoint: POST - https://my-movie-list-2.herokuapp.com/register 
 
 Params: 
-	User (string): Required, username of the person registerting
-	Password (string): Required, creates password for the current user
+	-user (string): Username of the person registerting
+	-password (string): Creates password for the current user
 
 Response: True for successful user registration or a 404 error if an user with the same username already exists.
 
@@ -57,8 +57,9 @@ Purpose: Login to the server.
 Endpoint: POST - https://my-movie-list-2.herokuapp.com/login
 
 Params:
-  User (string): Required, username of the person logging in
-  Password (string): Required, corresponding password of username
+
+-User (string): Username of the person logging in
+-Password (string): Corresponding password of username
 
 Response: True for successful logins, a 404 error for non-existing users, or a 403 error for incorrect password.
 
@@ -97,7 +98,7 @@ Purpose: Updates the “liked” attribute of a movie watched by the user
 Endpoint: PUT - https://my-movie-list-2.herokuapp.com/movies/:id  <- ":id" needs to be replaced with the id of the Movie object that is being updated
 
 Params:
-	Liked (string): Required, whether or not the movie was “liked” by the user. true = move was liked. false = movie was disliked. 
+	Liked (string): Whether or not the movie was “liked” by the user. true = move was liked. false = movie was disliked. 
 
 Response: The updated Movie object for successful requests, a 403 error if the user was incorrect(not the user who watched the movie or no user is logged in), or a 404 error if the movie doesn't exist for the user who's sent the request.
 
@@ -122,16 +123,11 @@ Purpose: Adds a movie to current user’s Movie List
 Endpoint: POST - https://my-movie-list-2.herokuapp.com/movies
 
 Params:
-
-	id (string): an unique string for the movie watched by the user
-	
-	user (string): the username of the logged in user
-	
-	title (string): the title of the movie being added
-	
-	liked (string): true or false to indicate whether the user liked the movie
-	
-	poster (string): an url for the movie's poster
+-id (string): an unique string for the movie watched by the user
+-user (string): the username of the logged in user
+-title (string): the title of the movie being added
+-liked (string): true or false to indicate whether the user liked the movie
+-poster (string): an url for the movie's poster
 
 Response: The added Movie object in a JSON format for successful requests or a 403 error if there is no users logged in.
 
