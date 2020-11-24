@@ -123,9 +123,13 @@ Endpoint: POST - https://my-movie-list-2.herokuapp.com/movies
 
 Params: 
 	id (string): an unique string for the movie watched by the user
+	
 	user (string): the username of the logged in user
+	
 	title (string): the title of the movie being added
+	
 	liked (string): true or false to indicate whether the user liked the movie
+	
 	poster (string): an url for the movie's poster
 
 Response: The added Movie object in a JSON format for successful requests or a 403 error if there is no users logged in.
